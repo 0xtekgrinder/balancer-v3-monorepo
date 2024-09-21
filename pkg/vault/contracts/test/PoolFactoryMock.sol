@@ -13,7 +13,7 @@ import { SingletonAuthentication } from "../SingletonAuthentication.sol";
 import { PoolMock } from "./PoolMock.sol";
 
 contract PoolFactoryMock is IBasePoolFactory, SingletonAuthentication, FactoryWidePauseWindow {
-    uint256 private constant DEFAULT_SWAP_FEE = 0;
+    uint256 private constant DEFAULT_SWAP_FEE = 5e16; // 5%
 
     IVault private immutable _vault;
 
